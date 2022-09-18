@@ -134,13 +134,13 @@ for iata in iatas:
                     print(formated_message)
                 print("_____________________@@@_________________________________")
                 import smtplib
-                my_email = "first.user799@gmail.com"
-                password = "Azerty1234."
+                my_email = "myemail@gmail.com"
+                password = "password"
                 #Now i will send an email alert to the costumer with the relevant data
                 with smtplib.SMTP("smtp.gmail.com") as connection:
                     connection.starttls()
                     connection.login(user=my_email, password=password)
-                    connection.sendmail(from_addr=my_email, to_addrs="first.user79@yahoo.com",
+                    connection.sendmail(from_addr=my_email, to_addrs="receivemail@yahoo.com",
                                         msg=f"subject:Dear costumer\n\n {formated_message}")
                 print("email sent")
             else:
